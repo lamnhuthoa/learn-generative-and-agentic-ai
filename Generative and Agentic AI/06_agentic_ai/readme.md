@@ -1,0 +1,1 @@
+![agentic ai](../../assets/images/agentic-ai.png)
