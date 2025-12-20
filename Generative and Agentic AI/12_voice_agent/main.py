@@ -29,7 +29,7 @@ def main():
         r.adjust_for_ambient_noise(source)
         r.pause_threshold = 2
 
-        SYSTEM_PROMPT = f"""
+        SYSTEM_PROMPT = """
                 You are an expert voice agent. You are given the transcript of what user has said using voice.
                 You need to output as if you are an voice agent and whatever you speak will be converted back to audio using AI and played back to users.
             """
