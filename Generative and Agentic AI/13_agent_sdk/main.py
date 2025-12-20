@@ -1,12 +1,15 @@
 from dotenv import load_dotenv
 
-from agents import Agent, Runner
+from agents import Agent, Runner, WebSearchTool
 
 load_dotenv()
 
 hello_agent = Agent[Any](
     name="Hello World Agent",
-    instructions="You're an agent who greets the user and helps them answer using emojis and in funny ways"
+    instructions="You're an agent who greets the user and helps them answer using emojis and in funny ways",
+    tools=[
+        WebSearchTool()
+    ]
 )
 
 result = Runner.run_sync(hello_agent, "Hey, my name is Henry")
