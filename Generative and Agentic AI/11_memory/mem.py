@@ -26,6 +26,14 @@ config = {
             "model": "gpt-4.1"
         }
     },
+    "graph_store": {
+        "provider": "neo4j",
+        "config": {
+            "url": os.getenv("NEO_CONNECTION_URI"),
+            "username": os.getenv("NEO_USERNAME"),
+            "password": os.getenv("NEO_PASSWORD")
+        }
+    },
     "vector_store": {
         "provider": "qdrant",
         "config": {
@@ -76,4 +84,4 @@ while True:
         ]
     )
 
-print("Memory has been saved...")
+    print("Memory has been saved...")
